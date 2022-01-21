@@ -4,9 +4,13 @@ React Native application with libraries React Native Navigation Bottom Tabs, Vec
 
 # Application
 
-![Screenshort](./src/assets/images/applicationImages/screen1.png)
-![Screenshort](./src/assets/images/applicationImages/screen2.png)
-![Screenshort](./src/assets/images/applicationImages/screen3.png)
+
+<img src="./src/assets/images/applicationImages/screen1.png" widht="150" height="250">
+
+<img src="./src/assets/images/applicationImages/screen2.png" widht="150" height="250">
+
+<img src="./src/assets/images/applicationImages/screen3.png" widht="150" height="250">
+
 
 ## Installation
 Download and install [Nodejs](https://nodejs.org/en/)
