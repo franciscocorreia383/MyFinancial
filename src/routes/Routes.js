@@ -1,14 +1,18 @@
+//libraries
 import React from 'react'
-import { Image, Text, TouchableOpacity, View } from 'react-native';
-import styles from './styles'
-
+import { TouchableOpacity, View } from 'react-native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-//import FontAwesomeIcon from 'react-native-vector-icons/FontAwesome';
 import Icon from 'react-native-vector-icons/SimpleLineIcons'
 
+//styles
+import styles from './styles'
+import { theme } from '../global/styles/theme'
+
+//screens
 import Home from '../screens/Home'
 import NewMov from '../screens/NewMov'
 import Graph from '../screens/Graph'
+
 
 const Tab = createBottomTabNavigator();
 
@@ -20,10 +24,7 @@ const CustomTabBarButton = ({ children, onPress }) => (
     }}
     onPress={onPress}
   >
-    <View style={{
-      backgroundColor: '#9A6FD6',
-      ...styles.touchableView
-    }}>
+    <View style={styles.touchableView}>
       {children}
     </View>
   </TouchableOpacity>
@@ -34,8 +35,8 @@ function Routes() {
   return (
     <Tab.Navigator
       tabBarOptions={{
-        activeTintColor: '#6A17E1',
-        inactiveTintColor: '#DDD',
+        activeTintColor: theme.colors.focusedIcon,
+        inactiveTintColor: theme.colors.unfocusedIcon,
         showLabel: false,
         style: {
           position: 'absolute',
@@ -43,7 +44,7 @@ function Routes() {
           left: 20,
           right: 20,
           elevations: 0,
-          backgroundColor: '#182028',
+          backgroundColor: theme.colors.backgroundBar,
           borderRadius: 15,
           height: 80,
           ...styles.shadow
@@ -56,9 +57,9 @@ function Routes() {
         component={Home}
         options={{
           tabBarLabel: 'Home',
-          tabBarIcon: ({ color, size , focused}) => (
+          tabBarIcon: ({ color, size, focused }) => (
             <View style={{
-              backgroundColor: focused ? '#000' : '#182028',
+              backgroundColor: focused ? theme.colors.focusedBackground : theme.colors.backgroundBar,
               alignItems: 'center',
               justifyContent: 'center',
               width: 60,
@@ -78,7 +79,7 @@ function Routes() {
         component={NewMov}
         options={{
           tabBarIcon: ({ focused }) => (
-            <Icon name="plus" color={focused ? '#FFFFFF' : '#000'} size={35} />
+            <Icon name="plus" color={focused ? theme.colors.focusedIcon : theme.colors.unfocusedIcon} size={35} />
           ),
           tabBarButton: (props) => (
             <CustomTabBarButton {...props} />
@@ -92,7 +93,7 @@ function Routes() {
         options={{
           tabBarIcon: ({ color, size, focused }) => (
             <View style={{
-              backgroundColor: focused ? '#000' : '#182028',
+              backgroundColor: focused ? theme.colors.focusedBackground : theme.colors.backgroundBar,
               alignItems: 'center',
               justifyContent: 'center',
               width: 60,

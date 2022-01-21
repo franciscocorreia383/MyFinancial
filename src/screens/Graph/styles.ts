@@ -7,7 +7,6 @@ const styles = StyleSheet.create({
         flex: 1,
         alignContent: 'center',
         alignItems: 'center',
-       // backgroundColor: '#3B0784'
     },
     body: {
         marginTop: getStatusBarHeight() + 26

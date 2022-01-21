@@ -1,8 +1,9 @@
 import {StyleSheet} from 'react-native';
+import { theme } from '../global/styles/theme'
 
 const styles = StyleSheet.create({
   shadow: {
-    shadowColor: '#0E1647',
+    shadowColor: theme.colors.shadowBar,
     shadowOffset: {
         width: 0,
         height: 10
@@ -20,7 +21,7 @@ const styles = StyleSheet.create({
       width: 70,
       height: 70,
       borderRadius: 35,
-      
+      backgroundColor: theme.colors.aroundBarIcon,
   }
   
 
