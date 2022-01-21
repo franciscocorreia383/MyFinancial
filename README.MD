@@ -13,7 +13,7 @@ React Native application with libraries React Native Navigation Bottom Tabs, Vec
 
 
 ## Installation
-Download and install [Nodejs](https://nodejs.org/en/)
+Download and install [Nodejs](https://nodejs.org/en/).
 
 Download code and run [yarn](https://yarnpkg.com/) or [npm](https://www.npmjs.com) install in the root to install the dependences.
 
@@ -24,14 +24,14 @@ yarn
 npm install
 ```
 
-Go to IOS folder and run [Pod](https://cocoapods.org) install
+Go to IOS folder and run [Pod](https://cocoapods.org) install.
 ```bash
 cd iOS && pod install && cd ..
 ```
 
 ## Usage
 
-Go to root folder and run yarn ios for Iphone emulator and yarn android for Android emulator
+Go to root folder and run yarn ios for Iphone emulator and yarn android for Android emulator.
 
 ```node
 yarn ios
